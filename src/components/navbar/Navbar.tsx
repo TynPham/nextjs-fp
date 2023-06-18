@@ -1,12 +1,14 @@
+"use client";
 import Link from "next/link";
 import * as React from "react";
 import styles from "./navbar.module.css";
+import { usePathname } from "next/navigation";
 
 const navLink = [
   {
     id: 1,
     name: "Home",
-    path: "/home",
+    path: "/",
   },
   {
     id: 2,
@@ -38,10 +40,11 @@ const navLink = [
 export interface NavbarProps {}
 
 export function Navbar(props: NavbarProps) {
+  const pathname = usePathname().split("/")[1];
   return (
     <div className={styles.container}>
       {navLink.map((link) => (
-        <Link href={link.path} key={link.id} className={styles.link}>
+        <Link href={link.path} key={link.id} className={`${styles.link} ${link.path === "/" + pathname ? styles.active : ""}`}>
           {link.name}
         </Link>
       ))}

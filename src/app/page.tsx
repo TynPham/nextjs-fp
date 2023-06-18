@@ -12,7 +12,7 @@ export default function Home() {
         <Button href="#" text="See Out Works" />
       </div>
       <div className={styles.item}>
-        <Image src={Hero} alt="see out works" className={styles.image} />
+        <Image src={Hero} alt="see out works" className={styles.image} priority />
       </div>
     </main>
   );
