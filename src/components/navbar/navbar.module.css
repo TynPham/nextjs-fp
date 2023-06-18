@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 6.25rem;
+}
+.link {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.1s ease-in;
+}
+.link:hover {
+  color: #53c28b;
+}

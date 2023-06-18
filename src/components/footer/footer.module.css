@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.125rem;
+  font-size: 0.875rem;
+}
+.name {
+  color: #53c28b;
+}
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.icon {
+  opacity: 0.6;
+  cursor: pointer;
+}
