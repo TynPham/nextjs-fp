@@ -47,9 +47,9 @@
   margin: 0;
 }
 
-body {
-  background: #000;
-  color: white;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
@@ -60,4 +60,18 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 3.75rem;
+}
+
+.theme {
+  transition: all 1s ease;
+}
+
+.light {
+  background-color: white;
+  color: #111;
+}
+
+.dark {
+  background-color: #111;
+  color: #bbb;
 }
