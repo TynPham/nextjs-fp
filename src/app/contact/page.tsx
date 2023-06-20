@@ -3,8 +3,14 @@ import Button from "@/components/button/Button";
 import Image from "next/image";
 import * as React from "react";
 import styles from "./contact.module.css";
+import { Metadata } from "next";
 
 export interface ContactProps {}
+
+export const metadata: Metadata = {
+  title: "Contact page",
+  description: "This is a contact page",
+};
 
 export default function Contact(props: ContactProps) {
   return (

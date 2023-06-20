@@ -3,6 +3,7 @@ import styles from "./blogId.module.css";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { Post } from "@/models/Post";
+import { Metadata } from "next";
 
 export interface BlogIdProps {
   params: {
@@ -16,6 +17,14 @@ async function getData(id: string) {
     notFound();
   }
   return res.json();
+}
+
+export async function generateMetadata({ params: { id } }: BlogIdProps): Promise<Metadata> {
+  const post: Post = await getData(id);
+  return {
+    title: post._id,
+    description: post.desc,
+  };
 }
 
 export default async function BlogId({ params: { id } }: BlogIdProps) {
